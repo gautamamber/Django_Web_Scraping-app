@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<center><h1>My Website</h1></center>
+
+<!-- <div class="jumbotron">
+  <h1 class="display-4">Welcome to My website</h1>
+ 
+</div> -->
+<center>
+	<h2>Current Price</h2>
+</center>
+{% for key,value in price.DISPLAY.items %}
+<center>
+	
+	<h4>{{ key }} - {{ value.USD.PRICE }} </h4>
+</center><br>
+{% endfor %}
 
 <div class="container">
 	<div class="row">
