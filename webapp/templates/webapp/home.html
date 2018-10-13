@@ -2,18 +2,21 @@
 
 {% block content %}
 
-<!-- <div class="jumbotron">
+<div class="jumbotron">
   <h1 class="display-4">Welcome to My website</h1>
  
-</div> -->
+</div>
 <center>
 	<h2>Current Price</h2>
 </center>
 {% for key,value in price.DISPLAY.items %}
-<center>
 	
-	<h4>{{ key }} - {{ value.USD.PRICE }} </h4>
-</center><br>
+	<strong>Name : </strong> {{ key }}<br>
+	<strong>Price: </strong> {{ value.USD.PRICE }}<br>
+	<strong>Daily High: </strong> {{ value.USD.HIGHDAY }}<br>
+	<strong>Daily Low: </strong> {{ value.USD.LOWDAY }}<br>
+	<br>
+	<hr>
 {% endfor %}
 
 <div class="container">
